@@ -28,7 +28,7 @@ app.post("/respuestas", async (req, res) => {
       (respuesta) => typeof respuesta === "object" && respuesta !== null
     );
 
-    const ip_usuario = req.ip; // Obtener la IP del usuario
+    const ip_usuario = req.ip; // Obtener la IP usuario
 
     // Insertar las respuestas en la tabla respuestas
     for (const respuesta of respuestas) {
