@@ -91,7 +91,7 @@ app.get("/formulario/:id", async (req, res) => {
 });
 
 // Inicia el servidor
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Servidor en el puerto ${PORT}`);
 });
