@@ -2,10 +2,17 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import db from "./dbConfig.js"; // Importa la configuración de la base de datos
 import { v4 as uuidv4 } from "uuid";
 
 const app = express();
+
+const db = mysql.createConnection({
+  host: "172.21.123.36",
+  user: "laravel",
+  password: "HatunSoft@2023",
+  database: "encuestasdb",
+});
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -91,7 +98,7 @@ app.get("/formulario/:id", async (req, res) => {
 });
 
 // Inicia el servidor
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 4001;
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor en el puerto ${PORT}`);
 });
