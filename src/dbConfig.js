@@ -5,10 +5,7 @@ const pool = createPool({
   user: "root",
   password: "HatunSoft@2023",
   port: "3306",
-  database: "encuestasdb", // Cambia al nombre de tu base de datos
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
+  database: "encuestasdb"
 });
 
 export default pool;
