@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Exponemos el puerto 8000 en el contenedor
-EXPOSE 4000
+EXPOSE 4001
 
 # Comando para iniciar la aplicación backend
 CMD ["npm", "start"]
