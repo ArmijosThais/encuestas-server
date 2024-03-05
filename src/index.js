@@ -3,15 +3,9 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import { v4 as uuidv4 } from "uuid";
+import db from "./dbConfig.js"; 
 
 const app = express();
-
-const db = mysql.createConnection({
-  host: "172.21.123.36",
-  user: "laravel",
-  password: "HatunSoft@2023",
-  database: "encuestasdb",
-});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
